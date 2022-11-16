@@ -72,7 +72,7 @@ public class Run2Mean {
         System.out.println("+ Step 5: Đóng trình duyệt Chrome!...");
         driver.quit();
         endTask = System.currentTimeMillis();
-        totalTask = endTask - startTask;
+        totalTask = endTask - startTask - 10000;
         System.out.println("- - - - - - - - - - Task complete, total: " + totalTask +" MilliSecond - - - - - - - - - -" );
     }
 }
