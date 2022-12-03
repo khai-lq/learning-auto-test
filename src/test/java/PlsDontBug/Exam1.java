@@ -1,23 +1,34 @@
 package PlsDontBug;
 
-import org.openqa.selenium.*;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-import java.util.Set;
+import java.awt.*;
+import java.io.File;
+
 
 import static java.lang.Thread.sleep;
 
-public class Run2Mean {
+public class Exam1 {
     @Test
     public  void runrunrun() throws InterruptedException {
         long startTask, endTask;
         long startStep, endStep;
         long totalTask, totalStep;
 
-        System.out.println("- - - - - - - - - STARTING - - - - - - - - - -");
+        try{
+            Desktop desktop = Desktop.getDesktop();
+            File writeLog = new File("D:\\writeLog.txt");
+            if (writeLog.createNewFile()) {
+                System.out.println("File created: " + writeLog.getName());
+                desktop.open(writeLog);
+            } else {
+                System.out.println("File already exists.");
+            }
+        }catch(Exception e) {
+            e.printStackTrace();
+        }
+
+        /*System.out.println("- - - - - - - - - STARTING - - - - - - - - - -");
         startTask = System.currentTimeMillis();
 
         System.out.println("+ Step 1: Khởi chạy trình duyệt Chrome!...");
@@ -73,6 +84,7 @@ public class Run2Mean {
         driver.quit();
         endTask = System.currentTimeMillis();
         totalTask = endTask - startTask - 10000;
-        System.out.println("- - - - - - - - - - Task complete, total: " + totalTask +" MilliSecond - - - - - - - - - -" );
+        System.out.println("- - - - - - - - - - Task complete, total: " + totalTask +" MilliSecond - - - - - - - - - -" );*/
+
     }
 }
