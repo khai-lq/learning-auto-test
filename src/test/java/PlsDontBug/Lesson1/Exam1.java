@@ -1,4 +1,4 @@
-package PlsDontBug;
+package PlsDontBug.Lesson1;
 
 import org.testng.annotations.Test;
 
