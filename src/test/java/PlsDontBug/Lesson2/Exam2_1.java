@@ -20,7 +20,7 @@ public class Exam2_1 {
     public  void demoqa(){
         System.out.println("+ Step 1: Khởi chạy trình duyệt Chrome!...");
         WebDriver driver;
-        Select selectMonth, selectYear, selectState, selectCity;
+        Select selectMonth, selectYear;
         String[] monthExpected = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
